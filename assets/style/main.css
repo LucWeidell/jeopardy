@@ -5,6 +5,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
 :root {
   --blue: blue;
   --indigo: indigo;
@@ -10693,6 +10694,10 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+.title-font {
+  font-family: "Zen Tokyo Zoo", cursive;
 }
 
 /*# sourceMappingURL=main.css.map */
