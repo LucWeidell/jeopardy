@@ -22,8 +22,8 @@ export default class Question {
     </div>
 </div>
 <div class="col-12 mt-5 d-flex justify-content-around flex-grow-1">
-    <button type="button" class="btn btn-success">Correct</button>
-    <button type="button" class="btn btn-danger">Incorrect</button>
+    <button type="button" class="btn btn-success" onclick ='app.playersController.givePoints(${this.value})'>Correct</button>
+    <button type="button" class="btn btn-danger" onclick = 'app.playersController.losePoints(${this.value})'>Incorrect</button>
 </div>
 </div>
     `

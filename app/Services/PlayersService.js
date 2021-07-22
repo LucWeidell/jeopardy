@@ -27,6 +27,20 @@ class PlayerService{
     console.log('active player changed too', player.name)
   }
 
+  // RESTful convention for put is Collection/id
+  // REVIEW
+  async givePoints(val) {
+    ProxyState.activePlayer.points += val
+    await sandbox.put(ProxyState.activePlayer.id, ProxyState.activePlayer)
+    ProxyState.activePlayer = ProxyState.activePlayer
+  }
+  // REVIEW
+  async losePoints(val) {
+    ProxyState.activePlayer.points -= val
+    await sandbox.put(ProxyState.activePlayer.id, ProxyState.activePlayer) // or {points: ProxyState.activePlayer.points}
+    ProxyState.activePlayer = ProxyState.activePlayer
+  }
+
 }
 
 export const playersService = new PlayerService()

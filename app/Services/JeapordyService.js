@@ -12,7 +12,7 @@ class JeopardyService{
   async getNewQuestion() {
     const res = await jeapordyApi.get()
     console.log(res.data)
-    if(!res.data[0].question){
+    if(!res.data[0].question || !res.data[0].value){
       this.getNewQuestion()
       return
     }

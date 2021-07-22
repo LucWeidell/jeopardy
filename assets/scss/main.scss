@@ -24,3 +24,15 @@ main {
   font-size: 4rem;
 }
 
+.question {
+  &.hover{
+    .answer{
+      opacity: 1;
+    }
+  }
+  .answer{
+    opacity: 0;
+    transition: all
+  }
+}
+

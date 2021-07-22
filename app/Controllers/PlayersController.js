@@ -71,5 +71,11 @@ export default class PlayersController{
       //console.log(event.target['player-name'])
     }
 
-
+    async givePoints(){
+    try {
+      await playersService.givePoints(val)
+    } catch (error) {
+      console.log('error giving points', error)
+    }
+  }
 }
