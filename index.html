@@ -19,8 +19,27 @@
             </a>
         </nav>
     </header>
-    <main class="container">
-        <div id="app"></div>
+    <main class="container-fluid">
+        <div class="row bg-gray lighten-40 p-2">
+            <div class="col">
+                <div class="form-group">
+                  <label for="player-name">Name</label>
+                  <select onchange="app.playersController.setActivePlayer(event)" type="text" name="player-name" id="player-name" class="form-control">
+                      <option>Mark</option>
+                      <option>Jake</option>
+                      <option>AutoPilot</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col">
+                <p>Score: <span id= "score"></span></p>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-primary" onclick = "app.playersController.addPlayer()">Add Player</button>
+            </div>
+        </div>
+        <div class="row" id = "question">
+        </div>
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">
@@ -29,6 +48,7 @@
     </footer>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script> <!-- for IE and Android native browser support -->
     <script src="app/main.js" type="module"></script>
 </body>
 
